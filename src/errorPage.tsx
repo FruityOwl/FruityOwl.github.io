@@ -12,10 +12,6 @@ export const ErrorPage = () => {
         work-in-progress with the Patch'd Up ruleset, so no guarantees that it's
         working fully.
       </p>
-      <p>
-        If you'd like to report an error, please do so on{" "}
-        <a href="https://github.com/Nubuscu/panic-pwa/issues">Github</a>
-      </p>
     </div>
   )
 }

@@ -35,12 +35,6 @@ const App = () => {
           <CurrentHero />
           <BasicActionsList />
         </Grid>
-        <footer>
-          <Typography variant="caption">
-            Found a bug? Report it on{" "}
-            <a href="https://github.com/Nubuscu/panic-pwa/issues">Github</a>
-          </Typography>
-        </footer>
       </Container>
     </StyledEngineProvider>
   )
