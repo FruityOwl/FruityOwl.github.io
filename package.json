@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fruityowl.github.io/panic-pwa",
+  "homepage": "https://fruityowl.github.io/panic-pwa/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
