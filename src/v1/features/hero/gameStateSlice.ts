@@ -42,21 +42,30 @@ const initialState: GameState = {
       helpText:
         "Whenever you would deal damage to an enemy, reduce the damage by 2, then discard one weakness token.",
     },
+    fatigue: {
+      value: 0,
+      helpText:
+        "Whenever you would move, reduce the distance by 2, then discard 1.",
+    },
     chaos: { value: 0, helpText: "Use at any time to take a 4+ action" },
     control: {
       value: 0,
       helpText:
         "Spend 1 to negate an action within range, spend 2 to redirect it. The action still originates from that enemy, so use their range for targeting.",
     },
-    inspired: {
+    mentor: {
       value: 0,
       helpText:
-        "During an ally's turn, spend one to add an extra d8 to their action pool",
+        "The active character heals 1, then performs a Unique Action available to their current Stance, without paying its cost. For the purposes of Gates or the value of X, use a value of 4. Usable once per turn, only during allies’ turns. Usable while you are Taken Out",
     },
     training: {
       value: 0,
       helpText: `Spend one before an action to increase all numbers (including cost) by 1. You may only spend 1 per turn.
       NB: Be careful of the wording of the action. Actions that are phrased as "an ally" or "an enemy" still only have one target.`,
+    },
+    luck: {
+      value: 0,
+      helpText: "Once per turn, after any Action fully resolves, you may spend 1 Luck Token to Teleport 3 and Heal 1. 1 Luck Token may also be used to pay for (part of) any Token Action, in place of up to 3 Basic Tokens, 3 HP, or 3 Shield. This can be used as often as you have Luck Tokens and costs to reduce.",
     },
   },
 }

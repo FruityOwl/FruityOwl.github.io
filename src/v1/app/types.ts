@@ -16,6 +16,8 @@ export enum Token {
   Inspired = "Inspired",
   Training = "Training",
   Weakness = "Weakness",
+  Fatigue = "Fatigue",
+  Control = "Control",
   Any = "Any",
 }
 
@@ -125,9 +127,10 @@ export interface TokenState {
   power: TokenDisplay
   burning: TokenDisplay
   weakness: TokenDisplay
+  fatigue: TokenDisplay
   chaos: TokenDisplay
   control: TokenDisplay
-  inspired: TokenDisplay
+  mentor: TokenDisplay
   training: TokenDisplay
   [key: string]: TokenDisplay
 }
