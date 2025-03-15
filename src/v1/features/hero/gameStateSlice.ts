@@ -45,7 +45,7 @@ const initialState: GameState = {
     fatigue: {
       value: 0,
       helpText:
-        "Whenever you would move, reduce the distance by 2, then discard 1.",
+        "If you attempt to move or teleport using Free Movement, an Action, or an Ability while you have Fatigue tokens, instead discard one Fatigue token, and reduce the number of spaces you would move or teleport by 2. Swaps and Forced Movement are unaffected by Fatigue Tokens.",
     },
     chaos: { value: 0, helpText: "Use at any time to take a 4+ action" },
     control: {

@@ -129,44 +129,65 @@ export const StyleSelector = ({
   index,
   fromArchetypes = [],
 }: {
-  index: number
-  fromArchetypes: Archetype[]
+  index: number;
+  fromArchetypes: Archetype[];
 }) => {
-  const hero = useAppSelector(state => state.hero.hero)
-  const dispatch = useAppDispatch()
-  const handleDisabled = (style: Style) => hero.styles.includes(style)
+  const hero = useAppSelector((state) => state.hero.hero);
+  const dispatch = useAppDispatch();
 
-  const nonDefaultFronArchetypes = fromArchetypes.filter(
-    arch => arch !== defaultArchetype,
-  )
+  const handleDisabled = (style: Style) => hero.styles.includes(style);
+
+  const nonDefaultFromArchetypes = fromArchetypes.filter(
+    (arch) => arch !== defaultArchetype,
+  );
   const archetypeOptions =
-    nonDefaultFronArchetypes.length > 0 ? nonDefaultFronArchetypes : archetypes
+    nonDefaultFromArchetypes.length > 0 ? nonDefaultFromArchetypes : archetypes;
 
-  let menuItems: JSX.Element[] = []
-  archetypeOptions.forEach(archetype => {
-    const headerComponent = <ListSubheader>{archetype.name}</ListSubheader>
-    menuItems.push(headerComponent)
-    const menuComponents = styles
-      .filter(s => archetype.name === s.parentArchetypeName)
-      .map(s => (
-        <MenuItem key={s.name} value={s.name} disabled={handleDisabled(s)}>
+  let menuItems: JSX.Element[] = [];
+
+  // First, always show freestyles at the top
+  const freestyleOptions = styles.filter((s) => s.parentArchetypeName === "Freestyle");
+  
+  if (freestyleOptions.length > 0) {
+    menuItems.push(<ListSubheader key="freestyle-header">Freestyles</ListSubheader>);
+    menuItems = [
+      ...menuItems,
+      ...freestyleOptions.map((s) => (
+        <MenuItem key={`freestyle-${s.name}`} value={s.name} disabled={handleDisabled(s)}>
           {s.name}
         </MenuItem>
-      ))
-    menuItems = [...menuItems, ...menuComponents]
-  })
+      )),
+    ];
+  }
+
+  // Now include other styles by archetypes
+  archetypeOptions.forEach((archetype) => {
+    const archetypeStyles = styles.filter((s) => archetype.name === s.parentArchetypeName);
+    if (archetypeStyles.length > 0) {
+      menuItems.push(<ListSubheader key={`header-${archetype.name}`}>{archetype.name}</ListSubheader>);
+      menuItems = [
+        ...menuItems,
+        ...archetypeStyles.map((s) => (
+          <MenuItem key={`${archetype.name}-${s.name}`} value={s.name} disabled={handleDisabled(s)}>
+            {s.name}
+          </MenuItem>
+        )),
+      ];
+    }
+  });
+
   return (
     <Select
       value={hero.styles[index].name}
-      onChange={e => {
-        dispatch(setStyle({ styleName: e.target.value, number: index }))
+      onChange={(e) => {
+        dispatch(setStyle({ styleName: e.target.value, number: index }));
       }}
       MenuProps={MenuProps}
     >
       {menuItems}
     </Select>
-  )
-}
+  );
+};
 
 export const ArchetypeSelector = ({
   index,

@@ -41,6 +41,11 @@ export interface Ability {
   extra?: string // for ability clarifications, if any
 }
 
+export interface PassiveAbility {
+  name: string
+  description: string
+}
+
 export interface FormRangeModifier {
   relMaxRange?: number
   absMinRange?: number
@@ -49,6 +54,7 @@ export interface Form {
   key: string
   name: string
   ability: Ability
+  passiveAbility: PassiveAbility
   actionDice: (Dice | number)[]
   forbiddenActionDice: (Dice | number)[]
   actions: Action[]

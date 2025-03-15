@@ -21,6 +21,14 @@ export const FormDisplay = ({
           <strong>Action Dice: </strong>
           {form.actionDice.join(", ")}
           {characterType === CharacterType.Boss && ", (d4)"}
+        </p>       
+      </CardContent>
+    </Card>
+    <Card className="passiveAbility">
+      <CardContent>
+        <p>
+          <strong>{form.passiveAbility.name}:</strong>
+          <p>{form.passiveAbility.description}</p>
         </p>
       </CardContent>
     </Card>

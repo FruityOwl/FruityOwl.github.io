@@ -13,6 +13,10 @@ export const defaultForm: Form = {
   ability: {
     description: "",
   },
+  passiveAbility: {
+    name: "",
+    description: "",
+  },
   actionDice: [],
   forbiddenActionDice: [],
   actions: [],
@@ -23,6 +27,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "Your Actions may apply to one extra target within range. When you add Blaster Form to a Style, increase that Style's maximum range by 1.",
+    },
+    passiveAbility: {
+      name: "Basically Magic",
+      description: "You have an ability that's beyond normal, like lycanthropy, telekinesis, fire magic, ghost powers, or something else. When you take this skill, write down what kind of power you have.",
     },
     actionDice: [Dice.d8, Dice.d8, Dice.d8],
     forbiddenActionDice: [Dice.d8],
@@ -62,6 +70,10 @@ export const forms: Form[] = [
                       Increase that Style's maximum range by 3.
                       Setthat Style's minimum range to 0.`,
     },
+    passiveAbility:{
+      name: "Professional",
+      description: "You always look stylish, cool, and in control. People listen when you make demands of them, and you have some lackeys or followers who will do what you say.",
+    },
     actionDice: [Dice.d10, Dice.d8, Dice.d6, Dice.d4],
     forbiddenActionDice: [Dice.d8, Dice.d6],
     name: "Control",
@@ -93,6 +105,10 @@ export const forms: Form[] = [
         `After you take damage, pay HP, or are healed, you gain 1 Speed token. 
         When you Bleed, gain 3 Speed tokens. 
         After each Dice Action you perform, if it applied Forced Movement to an enemy, they must discard 1 Basic token, if they have any. If it applied Forced Movement to an ally, they heal 1. If it moved, swapped, or teleported you, you heal 1`,
+    },
+    passiveAbility: {
+      name: "Put On A Show",
+      description: "You can draw as much attention as you want, whenever you want it, away from anything else, for any reason.",
     },
     actionDice: [Dice.d10, Dice.d8, Dice.d6],
     forbiddenActionDice: [Dice.d8, Dice.d6],
@@ -150,6 +166,10 @@ export const forms: Form[] = [
       description:
         "You have Armor. When your Armor triggers, you gain 1 Iron token. When you gain Speed tokens, replace half of them (rounded down) with Iron tokens. You may spend 1 Iron token to take 1 less damage from any source (even Reduced Hits).",
     },
+    passiveAbility: {
+      name: "Immovable",
+      description: "When you plant your feet and stand your ground, nothing can get past you or hurt you, not even vehicles or gunfire.",
+    },
     actionDice: [Dice.d8, Dice.d6, Dice.d6],
     forbiddenActionDice: [Dice.d6, Dice.d6],
     name: "Iron",
@@ -191,6 +211,10 @@ export const forms: Form[] = [
       description:
         "Before each Action you perform, you may Move 1. After your first Action on your turn, Move 1, then deal 2 damage to an enemy within range. At the end of each turn where you performed any Actions, you may deal 1 damage to an enemy within range, then Move 2.",
     },
+    passiveAbility: {
+      name: "Think Fast",
+      description: "You can come up with plans and act on them in an instant. You never lose in games of skill, and you can fast talk anyone into seeing things your way.",
+    },   
     actionDice: [Dice.d6, Dice.d6, Dice.d4, Dice.d4],
     forbiddenActionDice: [Dice.d6, Dice.d4],
     name: "One-Two",
@@ -224,6 +248,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "When you gain Speed tokens, replace half of them (rounded down) with Power tokens. You can Enhance a Hit two additional times.",
+    },
+    passiveAbility: {
+      name: "Unstoppable",
+      description: "You can smash through any door, wall, or vehicle.",
     },
     actionDice: [Dice.d10, Dice.d10, Dice.d4],
     forbiddenActionDice: [Dice.d10, Dice.d4],
@@ -260,6 +288,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "You have Armor. Unblockable by Control Tokens and Iron Tokens. The first time your Armor triggers each turn, you may Teleport 2. Then, if your Action Pool is empty, add a 3 to your Action Pool",
+    },
+    passiveAbility: {
+      name: " Perfect Timing",
+      description: "You are always in the right place at the right time. You can perfectly catch or stop anything coming directly at you with a single, well-placed motion.",
     },
     actionDice: [Dice.d8, Dice.d8, Dice.d6, Dice.d4],
     forbiddenActionDice: [Dice.d8, Dice.d4],
@@ -303,6 +335,10 @@ export const forms: Form[] = [
       description:
         "At the start and end of your turn, you gain 2 Speed tokens. At the start of each Movement Phase, you may Move 1. You do not discard any Speed tokens during the End Phase.",
     },
+    passiveAbility: {
+      name: "Shadow Walker",
+      description: "If you don't want to draw attention to yourself, no one will ever notice you sneaking around, even in plain sight.",
+    },
     actionDice: [Dice.d4, Dice.d4, Dice.d4, Dice.d4, Dice.d4, Dice.d4],
     forbiddenActionDice: [Dice.d4, Dice.d4, Dice.d4],
     name: "Shadow",
@@ -329,6 +365,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "At the start of your turn, choose your song: Iron, Power, or Speed. You gain 3 tokens of the chosen type, and each ally (other than yourself) gains 1 token of the chosen type.",
+    },
+    passiveAbility: {
+      name: "Natural Charisma",
+      description: "People naturally like you. Anyone who is not your enemy is your friend, even if you've just met them.",
     },
     actionDice: [Dice.d8, Dice.d6, Dice.d6, Dice.d4],
     forbiddenActionDice: [Dice.d8, Dice.d4],
@@ -380,6 +420,10 @@ export const forms: Form[] = [
       description:
         "At the start and end of your turn, you gain Shield 2. After your Shield absorbs from an enemy Action, you deal 1 damage to them. If it broke your Shield, you deal 2 damage instead.",
     },
+    passiveAbility: {
+      name: "Rose Heart",
+      description: "You can redirect others' anger to more productive ends. Your soothing voice and gentle touch can calm rampaging beasts, unruly mobs, and anyone else acting out of hurt or anger.",
+    },
     actionDice: [5, Dice.d6, Dice.d6, Dice.d6],
     forbiddenActionDice: [5, Dice.d6],
     name: " Thorns Form",
@@ -413,6 +457,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "At the start of your turn, discard up to 2 Status tokens you hold; then, if you are Bleeding, you heal. At the end of your turn, choose up to two enemies within range and give them each 1 Weakness token.",
+    },
+    passiveAbility: {
+      name: "",
+      description: "Your senses are unusually strong. You cannot be surprised by anything, and always have a chance to react first.",
     },
     actionDice: [5, 4, 3, 2, 1],
     forbiddenActionDice: [5, 3],
@@ -455,6 +503,10 @@ export const forms: Form[] = [
     ability: {
       description:
         "After each Action you perform, if you are not Bleeding, you pay 1 HP. At the start of your turn, you gain 2 Power tokens. When you Bleed, add a 4 toyour Action Pool.",
+    },
+    passiveAbility: {
+      name: "",
+      description: "You can leap to anywhere you can see, run along walls, run as fast as a car, and, if you have an explanation, fly.",
     },
     actionDice: [Dice.d10, Dice.d6, Dice.d6],
     forbiddenActionDice: [Dice.d10],
@@ -2096,6 +2148,376 @@ export const styles = [{
           description: "Target an enemy within range. Deal damage to them equal to the number of Status tokens they hold, to a max of 12 damage. Usable once per turn.",
       }, ],
   }, ],
+},
+{
+  key: "66",
+  parentArchetypeName: "Freestyle",
+  name: "Silent",
+  minRange: 1,
+  maxRange: 2,
+  ability: {
+    description:
+      "At the start and end of your turn, you gain 2 Speed tokens.\nAt the start of each Movement Phase, you may Move 1.\nYou do not discard any Speed tokens during the End Phase.",
+  },
+  actions: [
+    {
+      name: "Stunt",
+      levels: [
+        {
+          otherCost: ["3 Speed Tokens"],
+          description:
+            "Place one Fog, Copy, Pit, or Trap obstacle into an adjacent space, then teleport 2.\nDuring enemy turns: usable once per turn.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "67",
+  parentArchetypeName: "Freestyle",
+  name: "Chaotic",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "Before each Action you perform, you may Move 1.\nAfter your first Action on your turn, Move 1, then deal 2 damage to an enemy within range.\nAt the end of each turn where you performed any Actions, you may deal 1 damage to an enemy within range, then Move 2.",
+  },
+  actions: [
+    {
+      name: "Slide In",
+      levels: [
+        {
+          diceCost: [1, 4],
+          description:
+            "Teleport 2.\n4+: Teleport 2 more, then you may deal 1 damage to an enemy within range.",
+        },
+      ],
+    },
+    {
+      name: "Left, Right!",
+      levels: [
+        {
+          diceCost: [4],
+          description:
+            "Deal 1 damage to an enemy within range, then you may Move 1, then you deal 2 more damage to that enemy.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "68",
+  parentArchetypeName: "Freestyle",
+  name: "Circular",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "After you take damage, pay HP, or are healed, you gain 1 Speed token.\nWhen you Bleed, gain 3 Speed tokens.\nAfter each Dice Action you perform, if it applied Forced Movement to an enemy, they must discard 1 Basic token, if they have it. If it applied Forced Movement to an ally, they heal 1. If it moved, swapped, or teleported you, you heal 1.",
+  },
+  actions: [
+    {
+      name: "Dance Together",
+      levels: [
+        {
+          otherCost: ["3 Speed Tokens"],
+          description:
+            "Push someone within range. Pull them 1, then you Move 1, then you Pull them 1 more.\nUsable once per turn.",
+        },
+      ],
+    },
+    {
+      name: "Dance Apart",
+      levels: [
+        {
+          diceCost: [3, 6, 10],
+          description:
+            "Swap spaces with an adjacent enemy, then Push them 1.\n6+: Pull them 2, then deal 2 damage to them.\n10+: Push them 4, then deal 3 damage to them.",
+        },
+        {
+          diceCost: [4, 7],
+          description:
+            "Push 3 to someone within range, then Move 1.\n7+: Move 2 more, then heal.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "69",
+  parentArchetypeName: "Freestyle",
+  name: "Dangerous",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "At the start and end of your turn, you gain Shield 2.\nAfter your Shield absorbs from an enemy Action, you deal 1 damage to them. If it broke your Shield, deal 2 damage instead.",
+  },
+  actions: [
+    {
+      name: "Blossoms",
+      levels: [
+        {
+          diceCost: [3, 6],
+          description:
+            "You gain Shield 2 and choose one: Gain 1 Power token; -or- Move 1; -or- heal 1.\n6+: Instead, gain Shield 4 and choose two.",
+        },
+      ],
+    },
+    {
+      name: "Brambles",
+      levels: [
+        {
+          otherCost: ["Destroy Your Shield"],
+          description:
+            "Deal 1 damage to up to X enemies within Range 1-X, then gain 1 Power token. X is equal to the value of the destroyed Shield. Usable twice per turn.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "70",
+  parentArchetypeName: "Freestyle",
+  name: "Ego",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "Once per turn, when an enemy you can see gains Basic tokens, you gain 1 Power token.\nYou can Enhance a Hit one additional time.",
+  },
+  actions: [
+    {
+      name: "Confident Smirk",
+      levels: [
+        {
+          diceCost: [1],
+          description: "Unblockable. Gain 1 Power token and heal 1.",
+        },
+      ],
+    },
+    {
+      name: "Burning Fist",
+      levels: [
+        {
+          diceCost: [5],
+          description:
+            "Deal 2 damage to an enemy within range, then give them Burning Tokens equal to the damage dealt to them by Burning Fist.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "71",
+  parentArchetypeName: "Freestyle",
+  name: "Eternal",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "At the start of your turn, discard up to 2 Status tokens you hold; then, if you are Bleeding, you heal.\nAt the end of your turn, choose up to two enemies within range and give them each 1 Weakness token.",
+  },
+  actions: [
+    {
+      name: "Bow Down",
+      levels: [
+        {
+          diceCost: [2, 4],
+          description:
+            "Give 1 Weakness token to an enemy within range.\n4+: Give 1 Weakness token to each enemy within range.",
+        },
+      ],
+    },
+    {
+      name: "Stand Strong",
+      levels: [
+        {
+          diceCost: [1, 3, 5],
+          description:
+            "1+: Give 1 Power token to an ally within range.\n3+: Heal that ally.\n5+: Heal and give 1 Power token to a different ally within range. Usable once per turn.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "72",
+  parentArchetypeName: "Freestyle",
+  name: "Grave",
+  minRange: 3,
+  maxRange: 3,
+  ability: {
+    description:
+      "After you spend Control Tokens, you may Push 1 or Pull 1 to the enemy whose Action you Controlled.\nAt the start of your turn, choose one:\n- Set your Range to 3-6 until your next turn.\n- Set your Range to 0-3 until your next turn.",
+  },
+  actions: [
+    {
+      name: "Suppression",
+      levels: [
+        {
+          diceCost: [3, 6, 9],
+          description:
+            "3+: You gain 1 Control token and may Move 1.\n6+: You gain 1 Control token and may Move 1.\n9+: You gain 1 Control token and may Move 1.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "73",
+  parentArchetypeName: "Freestyle",
+  name: "Feral",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "After each Action you perform, if you are not Bleeding, pay 1 HP.\nAt the start of your turn, you gain 2 Power tokens.\nWhen you Bleed, add a d4 to your Action Pool.",
+  },
+  actions: [
+    {
+      name: "Pounce",
+      levels: [
+        {
+          diceCost: [],
+          description:
+            "Pull yourself 3 towards an enemy you can see. Usable once per turn.",
+        },
+      ],
+    },
+    {
+      name: "Howl",
+      levels: [
+        {
+          diceCost: [4],
+          description:
+            "Gain 1 Power token, then heal 4, then give 1 Weakness token to each enemy you can see. Usable once per turn.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "74",
+  parentArchetypeName: "Freestyle",
+  name: "Mountainous",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "You have Armor.\nWhen your Armor triggers, you gain 1 Iron token.\nWhen you gain Speed tokens, replace half of them (rounded down) with Iron tokens.\nYou may spend 1 Iron token to take 1 less damage from any source (even Reduced Hits).",
+  },
+  actions: [
+    {
+      name: "Secure",
+      levels: [
+        {
+          diceCost: [3],
+          description:
+            "Choose two: Gain 2 Iron tokens; -or- an ally within range other than yourself gains 2 Iron tokens; -or- give Shield 2 to an ally within range.",
+        },
+      ],
+    },
+    {
+      name: "Contain",
+      levels: [
+        {
+          diceCost: [3],
+          description:
+            "Target an enemy within range, then Choose two: Challenge them; -or- Give them 2 Fatigue tokens; -or- place a Trap into their space.",
+        },
+      ],
+    },
+    {
+      name: "Protect",
+      levels: [
+        {
+          diceCost: [6],
+          description:
+            "Choose four from the Secure and Contain lists. Options from the Contain list must target an enemy within range.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "75",
+  parentArchetypeName: "Freestyle",
+  name: "Mythical",
+  minRange: 2,
+  maxRange: 3,
+  ability: {
+    description:
+      "Whenever you roll a 3 or less on the mythical D12, re-roll it.\nAfter you roll your Action Dice during your turn, you may re-roll one die. Keep the new result, even if it is worse.",
+  },
+  actions: [
+    {
+      name: "Beyond Human",
+      levels: [
+        {
+          diceCost: [3, 6, 9, 11],
+          description:
+            "Choose one: You Heal 2; -or- you gain 2 Power tokens; -or- discard up to 4 Status tokens among allies within range; -or- you gain Shield 3.\n6+: Choose two instead.\n9+: Choose three instead.\n11+: Choose all four instead.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "76",
+  parentArchetypeName: "Freestyle",
+  name: "Secret",
+  minRange: 1,
+  maxRange: 2,
+  ability: {
+    description:
+      "At the start of your turn, add a d6 to your Action Pool, gain Shield 4, and you gain +3 maximum Range until the start of your next turn.\nThis Ability triggers only once per fight.\nThis Ability cannot trigger on Round 1.",
+  },
+  actions: [
+    {
+      name: "Say Hello To My Secret Weapon",
+      levels: [
+        {
+          diceCost: [3],
+          description:
+            "Deal 4 damage to an enemy within range. Usable once per fight.",
+        },
+      ],
+    },
+  ],
+},
+{
+  key: "77",
+  parentArchetypeName: "Freestyle",
+  name: "Persistant",
+  minRange: 1,
+  maxRange: 1,
+  ability: {
+    description:
+      "At the start of your turn and when you Bleed, add a d3 to your Action Pool.\nWhen you discard numbers from your Action Pool during the End Phase, you may keep up to two of them with a total value of 5 or less.",
+  },
+  actions: [
+    {
+      name: "Strut Your Stuff",
+      levels: [
+        {
+          diceCost: [3],
+          description:
+            "Pull yourself 4 towards the active character. Then, if they are an enemy, deal 1 damage to them. If they are an ally, give them 1 Iron token.\nCannot be used on your own turn.",
+        },
+      ],
+    },
+    {
+      name: "Palm Strike",
+      levels: [
+        {
+          diceCost: [3],
+          description:
+            "Push 3 and deal 1 damage to an adjacent enemy.",
+        },
+      ],
+    },
+  ],
 }
 ];
 
