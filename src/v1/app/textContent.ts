@@ -110,7 +110,7 @@ export const forms: Form[] = [
       name: "Put On A Show",
       description: "You can draw as much attention as you want, whenever you want it, away from anything else, for any reason.",
     },
-    actionDice: [Dice.d10, Dice.d8, Dice.d6],
+    actionDice: [Dice.d10, Dice.d8, Dice.d6, Dice.d6],
     forbiddenActionDice: [Dice.d8, Dice.d6],
     name: "Dance",
     actions: [
@@ -170,7 +170,7 @@ export const forms: Form[] = [
       name: "Immovable",
       description: "When you plant your feet and stand your ground, nothing can get past you or hurt you, not even vehicles or gunfire.",
     },
-    actionDice: [Dice.d8, Dice.d6, Dice.d6],
+    actionDice: [Dice.d8, Dice.d6, Dice.d6, Dice.d6],
     forbiddenActionDice: [Dice.d6, Dice.d6],
     name: "Iron",
     actions: [
@@ -293,8 +293,8 @@ export const forms: Form[] = [
       name: " Perfect Timing",
       description: "You are always in the right place at the right time. You can perfectly catch or stop anything coming directly at you with a single, well-placed motion.",
     },
-    actionDice: [Dice.d8, Dice.d8, Dice.d6, Dice.d4],
-    forbiddenActionDice: [Dice.d8, Dice.d4],
+    actionDice: [Dice.d10, Dice.d10],
+    forbiddenActionDice: [Dice.d10],
     name: "Reversal",
     actions: [
       {
@@ -508,8 +508,8 @@ export const forms: Form[] = [
       name: "",
       description: "You can leap to anywhere you can see, run along walls, run as fast as a car, and, if you have an explanation, fly.",
     },
-    actionDice: [Dice.d10, Dice.d6, Dice.d6],
-    forbiddenActionDice: [Dice.d10],
+    actionDice: [Dice.d10, Dice.d10, Dice.d6, Dice.d6],
+    forbiddenActionDice: [Dice.d10, Dice.d6],
     name: "Wild",
     actions: [
       {
