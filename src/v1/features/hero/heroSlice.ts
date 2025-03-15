@@ -129,6 +129,7 @@ export const combineForms = (f1: Form, f2: Form): Form => {
       ...(f1.rangeModifiers ?? []),
       ...(f2.rangeModifiers ?? []),
     ],
+    passiveAbility: f1.passiveAbility, // or combine as needed
   }
 }
 export const heroSlice = createSlice({
